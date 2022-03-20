@@ -8,6 +8,14 @@
 \description{
 What the package does (one paragraph).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/mrcaseb/worldtimer}
+  \item Report bugs at \url{https://github.com/mrcaseb/worldtimer/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Sebastian Carl \email{mrcaseb@gmail.com}
 
