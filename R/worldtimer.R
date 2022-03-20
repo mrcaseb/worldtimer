@@ -2,7 +2,7 @@
 worldtimer <- function(resource, ...) {
   resp <- request("http://worldtimeapi.org/api/") %>%
     req_url_path_append(resource) %>%
-    req_user_agent("worldtimer (http://my.package.web.site)") %>%
+    req_user_agent("worldtimer (https://github.com/mrcaseb/worldtimer)") %>%
     req_perform() %>%
     resp_body_json(...)
 
