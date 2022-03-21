@@ -47,13 +47,22 @@ worldtimer_ip <- function(ipv4 = NULL){
   }
 }
 
+#' Print and Format worldtimer Objects
+#' @description These are Methods for the `print()` and `format()` generics.
+#' @inheritParams base::print.POSIXct
+#' @inheritParams base::format.POSIXct
+#' @name worldtimer-methods
+NULL
+
 #' @export
+#' @rdname worldtimer-methods
 print.worldtimer <- function(x, ...){
   print(x$utc_datetime, tz = x$timezone, usetz = TRUE, ...)
   invisible(x)
 }
 
 #' @export
+#' @rdname worldtimer-methods
 format.worldtimer <- function(x, tz = "UTC", usetz = TRUE, ...){
   format(x$utc_datetime, tz = tz, usetz = usetz, ...)
 }
