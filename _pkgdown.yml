@@ -3,11 +3,8 @@ url: https://mrcaseb.github.io/worldtimer/
 template:
   bootstrap: 5
   bootswatch: vapor
-  bslib:
-    base_font: {google: "Roboto"}
-    heading_font: {google: "Roboto Slab"}
-    code_font: {google: "JetBrains Mono"}
+  theme: arrow-dark
 
 navbar:
-  bg: light
+  bg: dark
 
