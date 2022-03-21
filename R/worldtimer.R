@@ -3,15 +3,35 @@
 #' @param resource Path in the WorldTimeAPI. Normally either a valid timezone
 #'   or an IP.
 #' @inheritDotParams httr2::resp_body_json
-#' @name worldtimer
+#' @name worldtimer-functions
+#' @returns `list` of class `worldtimer`
 #' @examples
-#' /donttest{
-#' try(worldtimer("America/New_York"))
+#' \donttest{
+#' # Change R option for printing decimals digits of seconds
+#' old <- options(digits.secs = 6)
+#'
+#' # Specific timezone
+#' tz <- try(worldtimer("America/New_York"))
+#' str(tz)
+#' print(tz)
+#'
+#' # The runner's public ip
+#' runner_ip <- worldtimer_ip()
+#' str(runner_ip)
+#' print(runner_ip)
+#'
+#' # Other public ip
+#' other_ip <- worldtimer_ip("101.110.34.62")
+#' str(other_ip)
+#' print(other_ip)
+#'
+#' # Restore old options
+#' options(old)
 #' }
 NULL
 
 #' @export
-#' @rdname worldtimer
+#' @rdname worldtimer-functions
 worldtimer <- function(resource, ...) {
   resp <- request("http://worldtimeapi.org/api/") %>%
     req_url_path_append(resource) %>%
@@ -30,7 +50,7 @@ worldtimer <- function(resource, ...) {
 }
 
 #' @export
-#' @rdname worldtimer
+#' @rdname worldtimer-functions
 worldtimer_timezones <- function(){
   worldtimer("timezone", simplifyVector = TRUE) %>%
     unclass() %>%
@@ -38,7 +58,7 @@ worldtimer_timezones <- function(){
 }
 
 #' @export
-#' @rdname worldtimer
+#' @rdname worldtimer-functions
 worldtimer_ip <- function(ipv4 = NULL){
   if(is.null(ipv4)) {
     worldtimer("ip", simplifyVector = TRUE)
@@ -52,6 +72,7 @@ worldtimer_ip <- function(ipv4 = NULL){
 #' @inheritParams base::print.POSIXct
 #' @inheritParams base::format.POSIXct
 #' @name worldtimer-methods
+#' @seealso [worldtimer-functions]
 NULL
 
 #' @export

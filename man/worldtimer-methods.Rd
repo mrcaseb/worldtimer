@@ -23,3 +23,6 @@
 \description{
 These are Methods for the \code{print()} and \code{format()} generics.
 }
+\seealso{
+\link{worldtimer-functions}
+}
