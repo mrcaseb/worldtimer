@@ -94,10 +94,9 @@ booleans, numbers, and strings) be caused to atomic vectors?</p></dd>
 <span class="r-in"><span class="co"># Specific timezone</span></span>
 <span class="r-in"><span class="va">tz</span> <span class="op">&lt;-</span> <span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">worldtimer</span><span class="op">(</span><span class="st">"America/New_York"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">tz</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> List of 15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> List of 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ abbreviation: chr "EDT"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ client_ip   : chr "40.123.53.205"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-21T18:15:24.309245-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-21T18:20:00.643681-04:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 80</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst         : logi TRUE</span>
@@ -106,21 +105,20 @@ booleans, numbers, and strings) be caused to atomic vectors?</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_until   : chr "2022-11-06T06:00:00+00:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ raw_offset  : int -18000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ timezone    : chr "America/New_York"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647900924</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:15:24.309245"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647901200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:20:00.643681"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_offset  : chr "-04:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ week_number : int 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "class")= chr "worldtimer"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">tz</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-21 18:15:24.309245 EDT"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-21 18:20:00.643681 EDT"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># The runner's public ip</span></span>
 <span class="r-in"><span class="va">runner_ip</span> <span class="op">&lt;-</span> <span class="fu">worldtimer_ip</span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">runner_ip</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> List of 15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> List of 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ abbreviation: chr "EDT"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ client_ip   : chr "40.123.53.205"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-21T18:15:24.345609-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-21T18:20:00.699660-04:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 80</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst         : logi TRUE</span>
@@ -129,21 +127,20 @@ booleans, numbers, and strings) be caused to atomic vectors?</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_until   : chr "2022-11-06T06:00:00+00:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ raw_offset  : int -18000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ timezone    : chr "America/New_York"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647900924</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:15:24.345608"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647901200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:20:00.69965"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_offset  : chr "-04:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ week_number : int 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "class")= chr "worldtimer"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">runner_ip</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-21 18:15:24.345608 EDT"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-21 18:20:00.69965 EDT"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Other public ip</span></span>
 <span class="r-in"><span class="va">other_ip</span> <span class="op">&lt;-</span> <span class="fu">worldtimer_ip</span><span class="op">(</span><span class="st">"101.110.34.62"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">other_ip</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> List of 15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> List of 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ abbreviation: chr "JST"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ client_ip   : chr "40.123.53.205"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-22T07:15:24.368185+09:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-22T07:20:00.724964+09:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 81</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst         : logi FALSE</span>
@@ -152,13 +149,13 @@ booleans, numbers, and strings) be caused to atomic vectors?</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_until   : NULL</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ raw_offset  : int 32400</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ timezone    : chr "Asia/Tokyo"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647900924</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:15:24.368185"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647901200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:20:00.724964"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_offset  : chr "+09:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ week_number : int 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "class")= chr "worldtimer"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">other_ip</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-22 07:15:24.368185 JST"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-22 07:20:00.724964 JST"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Restore old options</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span><span class="va">old</span><span class="op">)</span></span>
