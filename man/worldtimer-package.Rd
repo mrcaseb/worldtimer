@@ -12,6 +12,7 @@ What the package does (one paragraph).
 Useful links:
 \itemize{
   \item \url{https://github.com/mrcaseb/worldtimer}
+  \item \url{https://mrcaseb.github.io/worldtimer/}
   \item Report bugs at \url{https://github.com/mrcaseb/worldtimer/issues}
 }
 

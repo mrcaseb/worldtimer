@@ -1,4 +1,17 @@
+#' Send Requests to WorldTimeAPI
+#' @description Functions to talk to the WorldTimeAPI <http://worldtimeapi.org>
+#' @param resource Path in the WorldTimeAPI. Normally either a valid timezone
+#'   or an IP.
+#' @inheritDotParams httr2::resp_body_json
+#' @name worldtimer
+#' @examples
+#' /donttest{
+#' try(worldtimer("America/New_York"))
+#' }
+NULL
+
 #' @export
+#' @rdname worldtimer
 worldtimer <- function(resource, ...) {
   resp <- request("http://worldtimeapi.org/api/") %>%
     req_url_path_append(resource) %>%
@@ -17,6 +30,7 @@ worldtimer <- function(resource, ...) {
 }
 
 #' @export
+#' @rdname worldtimer
 worldtimer_timezones <- function(){
   worldtimer("timezone", simplifyVector = TRUE) %>%
     unclass() %>%
@@ -24,6 +38,7 @@ worldtimer_timezones <- function(){
 }
 
 #' @export
+#' @rdname worldtimer
 worldtimer_ip <- function(ipv4 = NULL){
   if(is.null(ipv4)) {
     worldtimer("ip", simplifyVector = TRUE)
