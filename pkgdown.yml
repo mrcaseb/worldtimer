@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-03-21T21:53Z
+last_built: 2022-03-21T22:09Z
 urls:
   reference: https://mrcaseb.github.io/worldtimer/reference
   article: https://mrcaseb.github.io/worldtimer/articles
