@@ -9,3 +9,9 @@ print(with_tz)
 
 str(with_ip)
 str(with_tz)
+
+# try to hit rate limit
+purrr::walk(1:20, function(x) {
+  t <- worldtimer_ip()
+  print(t)
+})

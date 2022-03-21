@@ -1,4 +1,6 @@
 #' @keywords internal
+#' @name worldtimer-package
+#' @aliases NULL
 "_PACKAGE"
 
 ## usethis namespace: start

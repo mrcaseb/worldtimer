@@ -2,8 +2,6 @@
 % Please edit documentation in R/worldtimeR-package.R
 \docType{package}
 \name{worldtimer-package}
-\alias{worldtimer}
-\alias{worldtimer-package}
 \title{worldtimer: An R Package to Obtain Time from WorldTimeAPI}
 \description{
 What the package does (one paragraph).

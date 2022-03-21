@@ -2,8 +2,10 @@
 #' @description Functions to talk to the WorldTimeAPI <http://worldtimeapi.org>
 #' @param resource Path in the WorldTimeAPI. Normally either a valid timezone
 #'   or an IP.
+#' @param ipv4 An ipv4 address for which to return the current time.
 #' @inheritDotParams httr2::resp_body_json
 #' @name worldtimer-functions
+#' @aliases NULL
 #' @returns `list` of class `worldtimer`
 #' @examples
 #' \donttest{
@@ -72,7 +74,7 @@ worldtimer_ip <- function(ipv4 = NULL){
 #' @inheritParams base::print.POSIXct
 #' @inheritParams base::format.POSIXct
 #' @name worldtimer-methods
-#' @seealso [worldtimer-functions]
+#' @seealso [worldtimer()]
 NULL
 
 #' @export
