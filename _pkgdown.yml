@@ -1,4 +1,5 @@
 url: https://mrcaseb.github.io/worldtimer/
 template:
   bootstrap: 5
+  bootswatch: slate
 
