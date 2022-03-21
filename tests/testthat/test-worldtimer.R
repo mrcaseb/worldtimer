@@ -3,7 +3,7 @@ test_that("worldtimer works", {
   skip_if_offline("worldtimeapi.org")
   tz <- worldtimer("America/New_York")
   expect_true(inherits(tz, "worldtimer"))
-  expect_gte(length(tz), 15)
+  expect_gte(length(tz), 14)
   expect_error(worldtimer("America/New_Yorkkkk"))
   expect_type(tz, "list")
   expect_identical(print(tz), tz)

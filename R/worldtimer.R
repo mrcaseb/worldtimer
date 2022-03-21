@@ -48,6 +48,10 @@ worldtimer <- function(resource, ...) {
     )
   }
 
+  if("client_ip" %in% names(resp)){
+    resp$client_ip <- NULL
+  }
+
   structure(resp, class = "worldtimer")
 }
 
