@@ -10,7 +10,7 @@
 #' @returns `list` of class `worldtimer`
 #' @examples
 #' \donttest{
-#' # Change R option for printing decimals digits of seconds
+#' # Change R option for printing decimal digits of seconds
 #' old <- options(digits.secs = 6)
 #'
 #' # Specific timezone
