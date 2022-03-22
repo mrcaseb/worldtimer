@@ -45,29 +45,29 @@ worldtimer_timezones()
 Requesting the current time from a specific timezone can be done with
 
 ```{r}
-with_tz <- worldtimer("America/New_York")
+new_york_time <- worldtimer("America/New_York")
 ```
 
-The function returns a list of class ``r class(with_tz)``. If you print it to the console it will print a formatted time string of the queried time like this
+The function returns a list of class ``r class(new_york_time)``. If you print it to the console it will print a formatted time string of the queried time like this
 
 ```{r}
-print(with_tz)
+print(new_york_time)
 ```
 
-However, the object `with_tz` includes some additional information. You can check the full contents with
+However, the object `new_york_time` includes some additional information. You can check the full contents with
 
 ```{r}
-str(with_tz)
+str(new_york_time)
 ```
 
 The API returns the current time with microsecond precision but R defaults to printing no decimal digits of seconds. This can be changed by setting `options(digits.secs)`. 
 
 ```{r}
 options(digits.secs = 3)
-print(with_tz)
+print(new_york_time)
 
 options(digits.secs = 6)
-print(with_tz)
+print(new_york_time)
 ```
 
 (Please note this option is R specific and does not do any rounding. It just cuts off the digits.)

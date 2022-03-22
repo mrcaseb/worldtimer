@@ -41,9 +41,9 @@ Functions to talk to the WorldTimeAPI \url{http://worldtimeapi.org}
 old <- options(digits.secs = 6)
 
 # Specific timezone
-tz <- try(worldtimer("America/New_York"))
-str(tz)
-print(tz)
+new_york_time <- try(worldtimer("America/New_York"))
+str(new_york_time)
+print(new_york_time)
 
 # The system's public ip
 system_ip <- worldtimer_ip()
