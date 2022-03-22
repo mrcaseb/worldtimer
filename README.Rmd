@@ -16,8 +16,10 @@ knitr::opts_chunk$set(
 # worldtimer
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/worldtimer)](https://CRAN.R-project.org/package=worldtimer)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=flat-square)](https://lifecycle.r-lib.org/articles/stages.html)
+[![R build status](https://img.shields.io/github/workflow/status/mrcaseb/worldtimer/R-CMD-check?label=R%20check&style=flat-square&logo=github)](https://github.com/mrcaseb/worldtimer/actions)
+[![CRAN status](https://img.shields.io/cran/v/worldtimer?style=flat-square&logo=R&label=CRAN)](https://CRAN.R-project.org/package=worldtimer)
+[![Codecov test coverage](https://codecov.io/gh/mrcaseb/worldtimer/branch/main/graph/badge.svg)](https://app.codecov.io/gh/mrcaseb/worldtimer?branch=main)
 <!-- badges: end -->
 
 The goal of worldtimer is to provide a wrapper for [WorldTimeAPI](http://worldtimeapi.org). WorldTimeAPI is a simple web service which returns the current local time for a given timezone or IP address as either plain-text or JSON. This package makes the request and parses the response for usage in R.

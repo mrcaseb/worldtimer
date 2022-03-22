@@ -6,9 +6,13 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=flat-square)](https://lifecycle.r-lib.org/articles/stages.html)
+[![R build
+status](https://img.shields.io/github/workflow/status/mrcaseb/worldtimer/R-CMD-check?label=R%20check&style=flat-square&logo=github)](https://github.com/mrcaseb/worldtimer/actions)
 [![CRAN
-status](https://www.r-pkg.org/badges/version/worldtimer)](https://CRAN.R-project.org/package=worldtimer)
+status](https://img.shields.io/cran/v/worldtimer?style=flat-square&logo=R&label=CRAN)](https://CRAN.R-project.org/package=worldtimer)
+[![Codecov test
+coverage](https://codecov.io/gh/mrcaseb/worldtimer/branch/main/graph/badge.svg)](https://app.codecov.io/gh/mrcaseb/worldtimer?branch=main)
 <!-- badges: end -->
 
 The goal of worldtimer is to provide a wrapper for
@@ -35,7 +39,7 @@ To get a tibble of all valid timezone names run
 ``` r
 library(worldtimer)
 worldtimer_timezones()
-#> # A tibble: 386 × 1
+#> # A tibble: 386 x 1
 #>    timezone           
 #>    <chr>              
 #>  1 Africa/Abidjan     
@@ -48,7 +52,7 @@ worldtimer_timezones()
 #>  8 Africa/El_Aaiun    
 #>  9 Africa/Johannesburg
 #> 10 Africa/Juba        
-#> # … with 376 more rows
+#> # ... with 376 more rows
 ```
 
 Requesting the current time from a specific timezone can be done with
@@ -63,7 +67,7 @@ like this
 
 ``` r
 print(with_tz)
-#> [1] "2022-03-22 03:43:19 EDT"
+#> [1] "2022-03-22 08:05:10 EDT"
 ```
 
 However, the object `with_tz` includes some additional information. You
@@ -73,7 +77,7 @@ can check the full contents with
 str(with_tz)
 #> List of 14
 #>  $ abbreviation: chr "EDT"
-#>  $ datetime    : chr "2022-03-22T03:43:19.759250-04:00"
+#>  $ datetime    : chr "2022-03-22T08:05:10.259021-04:00"
 #>  $ day_of_week : int 2
 #>  $ day_of_year : int 81
 #>  $ dst         : logi TRUE
@@ -82,8 +86,8 @@ str(with_tz)
 #>  $ dst_until   : chr "2022-11-06T06:00:00+00:00"
 #>  $ raw_offset  : int -18000
 #>  $ timezone    : chr "America/New_York"
-#>  $ unixtime    : int 1647934999
-#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:43:19"
+#>  $ unixtime    : int 1647950710
+#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 12:05:10"
 #>  $ utc_offset  : chr "-04:00"
 #>  $ week_number : int 12
 #>  - attr(*, "class")= chr "worldtimer"
@@ -96,11 +100,11 @@ by setting `options(digits.secs)`.
 ``` r
 options(digits.secs = 3)
 print(with_tz)
-#> [1] "2022-03-22 03:43:19.759 EDT"
+#> [1] "2022-03-22 08:05:10.259 EDT"
 
 options(digits.secs = 6)
 print(with_tz)
-#> [1] "2022-03-22 03:43:19.75925 EDT"
+#> [1] "2022-03-22 08:05:10.259021 EDT"
 ```
 
 (Please note this option is R specific and does not do any rounding. It
@@ -114,7 +118,7 @@ devs_ip <- worldtimer_ip()
 str(devs_ip)
 #> List of 14
 #>  $ abbreviation: chr "CET"
-#>  $ datetime    : chr "2022-03-22T08:43:19.861082+01:00"
+#>  $ datetime    : chr "2022-03-22T13:05:10.383793+01:00"
 #>  $ day_of_week : int 2
 #>  $ day_of_year : int 81
 #>  $ dst         : logi FALSE
@@ -123,8 +127,8 @@ str(devs_ip)
 #>  $ dst_until   : NULL
 #>  $ raw_offset  : int 3600
 #>  $ timezone    : chr "Europe/Berlin"
-#>  $ unixtime    : int 1647934999
-#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:43:19.861082"
+#>  $ unixtime    : int 1647950710
+#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 12:05:10.383792"
 #>  $ utc_offset  : chr "+01:00"
 #>  $ week_number : int 12
 #>  - attr(*, "class")= chr "worldtimer"
@@ -138,7 +142,7 @@ ip_in_japan <- worldtimer_ip("101.110.34.62")
 str(ip_in_japan)
 #> List of 14
 #>  $ abbreviation: chr "JST"
-#>  $ datetime    : chr "2022-03-22T16:43:19.908682+09:00"
+#>  $ datetime    : chr "2022-03-22T21:05:10.434646+09:00"
 #>  $ day_of_week : int 2
 #>  $ day_of_year : int 81
 #>  $ dst         : logi FALSE
@@ -147,8 +151,8 @@ str(ip_in_japan)
 #>  $ dst_until   : NULL
 #>  $ raw_offset  : int 32400
 #>  $ timezone    : chr "Asia/Tokyo"
-#>  $ unixtime    : int 1647934999
-#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:43:19.908681"
+#>  $ unixtime    : int 1647950710
+#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 12:05:10.434646"
 #>  $ utc_offset  : chr "+09:00"
 #>  $ week_number : int 12
 #>  - attr(*, "class")= chr "worldtimer"
