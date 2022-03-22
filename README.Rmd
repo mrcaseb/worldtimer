@@ -52,7 +52,7 @@ The function returns a list of class ``r class(with_tz)``. If you print it to th
 print(with_tz)
 ```
 
-However, the object `with_tz` inherits more information like this. You can check the full list of returned objects with
+However, the object `with_tz` includes some additional information. You can check the full contents with
 
 ```{r}
 str(with_tz)

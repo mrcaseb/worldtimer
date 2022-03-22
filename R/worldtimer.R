@@ -2,7 +2,8 @@
 #' @description Functions to talk to the WorldTimeAPI <http://worldtimeapi.org>
 #' @param resource Path in the WorldTimeAPI. Normally either a valid timezone
 #'   or an IP.
-#' @param ipv4 An ipv4 address for which to return the current time.
+#' @param ipv4 An ipv4 address for which to return the current time. The default
+#'   `NULL` uses the system's public IP address.
 #' @inheritDotParams httr2::resp_body_json
 #' @name worldtimer-functions
 #' @aliases NULL
@@ -17,10 +18,10 @@
 #' str(tz)
 #' print(tz)
 #'
-#' # The runner's public ip
-#' runner_ip <- worldtimer_ip()
-#' str(runner_ip)
-#' print(runner_ip)
+#' # The system's public ip
+#' system_ip <- worldtimer_ip()
+#' str(system_ip)
+#' print(system_ip)
 #'
 #' # Other public ip
 #' other_ip <- worldtimer_ip("101.110.34.62")

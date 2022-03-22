@@ -63,27 +63,27 @@ like this
 
 ``` r
 print(with_tz)
-#> [1] "2022-03-21 18:15:58 EDT"
+#> [1] "2022-03-22 03:15:47 EDT"
 ```
 
-However, the object `with_tz` inherits more information like this. You
-can check the full list of returned objects with
+However, the object `with_tz` includes some additional information. You
+can check the full contents with
 
 ``` r
 str(with_tz)
 #> List of 14
 #>  $ abbreviation: chr "EDT"
-#>  $ datetime    : chr "2022-03-21T18:15:58.776445-04:00"
-#>  $ day_of_week : int 1
-#>  $ day_of_year : int 80
+#>  $ datetime    : chr "2022-03-22T03:15:47.666543-04:00"
+#>  $ day_of_week : int 2
+#>  $ day_of_year : int 81
 #>  $ dst         : logi TRUE
 #>  $ dst_from    : chr "2022-03-13T07:00:00+00:00"
 #>  $ dst_offset  : int 3600
 #>  $ dst_until   : chr "2022-11-06T06:00:00+00:00"
 #>  $ raw_offset  : int -18000
 #>  $ timezone    : chr "America/New_York"
-#>  $ unixtime    : int 1647900958
-#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:15:58"
+#>  $ unixtime    : int 1647933347
+#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:15:47"
 #>  $ utc_offset  : chr "-04:00"
 #>  $ week_number : int 12
 #>  - attr(*, "class")= chr "worldtimer"
@@ -96,11 +96,11 @@ by setting `options(digits.secs)`.
 ``` r
 options(digits.secs = 3)
 print(with_tz)
-#> [1] "2022-03-21 18:15:58.776 EDT"
+#> [1] "2022-03-22 03:15:47.666 EDT"
 
 options(digits.secs = 6)
 print(with_tz)
-#> [1] "2022-03-21 18:15:58.776444 EDT"
+#> [1] "2022-03-22 03:15:47.666543 EDT"
 ```
 
 (Please note this option is R specific and does not do any rounding. It
@@ -114,17 +114,17 @@ devs_ip <- worldtimer_ip()
 str(devs_ip)
 #> List of 14
 #>  $ abbreviation: chr "CET"
-#>  $ datetime    : chr "2022-03-21T23:15:58.893332+01:00"
-#>  $ day_of_week : int 1
-#>  $ day_of_year : int 80
+#>  $ datetime    : chr "2022-03-22T08:15:47.795926+01:00"
+#>  $ day_of_week : int 2
+#>  $ day_of_year : int 81
 #>  $ dst         : logi FALSE
 #>  $ dst_from    : NULL
 #>  $ dst_offset  : int 0
 #>  $ dst_until   : NULL
 #>  $ raw_offset  : int 3600
 #>  $ timezone    : chr "Europe/Berlin"
-#>  $ unixtime    : int 1647900958
-#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:15:58.893332"
+#>  $ unixtime    : int 1647933347
+#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:15:47.795926"
 #>  $ utc_offset  : chr "+01:00"
 #>  $ week_number : int 12
 #>  - attr(*, "class")= chr "worldtimer"
@@ -138,7 +138,7 @@ ip_in_japan <- worldtimer_ip("101.110.34.62")
 str(ip_in_japan)
 #> List of 14
 #>  $ abbreviation: chr "JST"
-#>  $ datetime    : chr "2022-03-22T07:15:58.953878+09:00"
+#>  $ datetime    : chr "2022-03-22T16:15:47.851548+09:00"
 #>  $ day_of_week : int 2
 #>  $ day_of_year : int 81
 #>  $ dst         : logi FALSE
@@ -147,8 +147,8 @@ str(ip_in_japan)
 #>  $ dst_until   : NULL
 #>  $ raw_offset  : int 32400
 #>  $ timezone    : chr "Asia/Tokyo"
-#>  $ unixtime    : int 1647900958
-#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-21 22:15:58.953877"
+#>  $ unixtime    : int 1647933347
+#>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:15:47.851547"
 #>  $ utc_offset  : chr "+09:00"
 #>  $ week_number : int 12
 #>  - attr(*, "class")= chr "worldtimer"

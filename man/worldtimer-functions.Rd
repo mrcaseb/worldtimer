@@ -26,7 +26,8 @@ or an IP.}
 booleans, numbers, and strings) be caused to atomic vectors?}
   }}
 
-\item{ipv4}{An ipv4 address for which to return the current time.}
+\item{ipv4}{An ipv4 address for which to return the current time. The default
+\code{NULL} uses the system's public IP address.}
 }
 \value{
 \code{list} of class \code{worldtimer}
@@ -44,10 +45,10 @@ tz <- try(worldtimer("America/New_York"))
 str(tz)
 print(tz)
 
-# The runner's public ip
-runner_ip <- worldtimer_ip()
-str(runner_ip)
-print(runner_ip)
+# The system's public ip
+system_ip <- worldtimer_ip()
+str(system_ip)
+print(system_ip)
 
 # Other public ip
 other_ip <- worldtimer_ip("101.110.34.62")
