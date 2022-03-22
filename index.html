@@ -104,13 +104,13 @@
 <p>The function returns a list of class <code>worldtimer</code>. If you print it to the console it will print a formatted time string of the queried time like this</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">with_tz</span><span class="op">)</span>
-<span class="co">#&gt; [1] "2022-03-22 03:15:47 EDT"</span></code></pre></div>
+<span class="co">#&gt; [1] "2022-03-22 03:43:19 EDT"</span></code></pre></div>
 <p>However, the object <code>with_tz</code> includes some additional information. You can check the full contents with</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">with_tz</span><span class="op">)</span>
 <span class="co">#&gt; List of 14</span>
 <span class="co">#&gt;  $ abbreviation: chr "EDT"</span>
-<span class="co">#&gt;  $ datetime    : chr "2022-03-22T03:15:47.666543-04:00"</span>
+<span class="co">#&gt;  $ datetime    : chr "2022-03-22T03:43:19.759250-04:00"</span>
 <span class="co">#&gt;  $ day_of_week : int 2</span>
 <span class="co">#&gt;  $ day_of_year : int 81</span>
 <span class="co">#&gt;  $ dst         : logi TRUE</span>
@@ -119,8 +119,8 @@
 <span class="co">#&gt;  $ dst_until   : chr "2022-11-06T06:00:00+00:00"</span>
 <span class="co">#&gt;  $ raw_offset  : int -18000</span>
 <span class="co">#&gt;  $ timezone    : chr "America/New_York"</span>
-<span class="co">#&gt;  $ unixtime    : int 1647933347</span>
-<span class="co">#&gt;  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:15:47"</span>
+<span class="co">#&gt;  $ unixtime    : int 1647934999</span>
+<span class="co">#&gt;  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:43:19"</span>
 <span class="co">#&gt;  $ utc_offset  : chr "-04:00"</span>
 <span class="co">#&gt;  $ week_number : int 12</span>
 <span class="co">#&gt;  - attr(*, "class")= chr "worldtimer"</span></code></pre></div>
@@ -128,11 +128,11 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>digits.secs <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">with_tz</span><span class="op">)</span>
-<span class="co">#&gt; [1] "2022-03-22 03:15:47.666 EDT"</span>
+<span class="co">#&gt; [1] "2022-03-22 03:43:19.759 EDT"</span>
 
 <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>digits.secs <span class="op">=</span> <span class="fl">6</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">with_tz</span><span class="op">)</span>
-<span class="co">#&gt; [1] "2022-03-22 03:15:47.666543 EDT"</span></code></pre></div>
+<span class="co">#&gt; [1] "2022-03-22 03:43:19.75925 EDT"</span></code></pre></div>
 <p>(Please note this option is R specific and does not do any rounding. It just cuts off the digits.)</p>
 <p>Instead of providing a specific timezone, you can also get time for your current public ip address with</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -140,7 +140,7 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">devs_ip</span><span class="op">)</span>
 <span class="co">#&gt; List of 14</span>
 <span class="co">#&gt;  $ abbreviation: chr "CET"</span>
-<span class="co">#&gt;  $ datetime    : chr "2022-03-22T08:15:47.795926+01:00"</span>
+<span class="co">#&gt;  $ datetime    : chr "2022-03-22T08:43:19.861082+01:00"</span>
 <span class="co">#&gt;  $ day_of_week : int 2</span>
 <span class="co">#&gt;  $ day_of_year : int 81</span>
 <span class="co">#&gt;  $ dst         : logi FALSE</span>
@@ -149,8 +149,8 @@
 <span class="co">#&gt;  $ dst_until   : NULL</span>
 <span class="co">#&gt;  $ raw_offset  : int 3600</span>
 <span class="co">#&gt;  $ timezone    : chr "Europe/Berlin"</span>
-<span class="co">#&gt;  $ unixtime    : int 1647933347</span>
-<span class="co">#&gt;  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:15:47.795926"</span>
+<span class="co">#&gt;  $ unixtime    : int 1647934999</span>
+<span class="co">#&gt;  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:43:19.861082"</span>
 <span class="co">#&gt;  $ utc_offset  : chr "+01:00"</span>
 <span class="co">#&gt;  $ week_number : int 12</span>
 <span class="co">#&gt;  - attr(*, "class")= chr "worldtimer"</span></code></pre></div>
@@ -160,7 +160,7 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">ip_in_japan</span><span class="op">)</span>
 <span class="co">#&gt; List of 14</span>
 <span class="co">#&gt;  $ abbreviation: chr "JST"</span>
-<span class="co">#&gt;  $ datetime    : chr "2022-03-22T16:15:47.851548+09:00"</span>
+<span class="co">#&gt;  $ datetime    : chr "2022-03-22T16:43:19.908682+09:00"</span>
 <span class="co">#&gt;  $ day_of_week : int 2</span>
 <span class="co">#&gt;  $ day_of_year : int 81</span>
 <span class="co">#&gt;  $ dst         : logi FALSE</span>
@@ -169,8 +169,8 @@
 <span class="co">#&gt;  $ dst_until   : NULL</span>
 <span class="co">#&gt;  $ raw_offset  : int 32400</span>
 <span class="co">#&gt;  $ timezone    : chr "Asia/Tokyo"</span>
-<span class="co">#&gt;  $ unixtime    : int 1647933347</span>
-<span class="co">#&gt;  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:15:47.851547"</span>
+<span class="co">#&gt;  $ unixtime    : int 1647934999</span>
+<span class="co">#&gt;  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 07:43:19.908681"</span>
 <span class="co">#&gt;  $ utc_offset  : chr "+09:00"</span>
 <span class="co">#&gt;  $ week_number : int 12</span>
 <span class="co">#&gt;  - attr(*, "class")= chr "worldtimer"</span></code></pre></div>
@@ -178,7 +178,31 @@
 <div class="section level2">
 <h2 id="faq">FAQ<a class="anchor" aria-label="anchor" href="#faq"></a>
 </h2>
+<div class="section level3">
+<h3 id="why-is-my-timezone-missing">Why is my timezone missing?<a class="anchor" aria-label="anchor" href="#why-is-my-timezone-missing"></a>
+</h3>
+<p>R offers a commonly used list of timezones that can be called with <code><a href="https://rdrr.io/r/base/timezones.html" class="external-link">OlsonNames()</a></code>. Some of these timezones are not listed in <code><a href="reference/worldtimer-functions.html">worldtimer_timezones()</a></code> because they are not canonical which means that a timezone name is just an alias for the actual (“canonical”) timezone name. A full list of canonical timezones can be found <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" class="external-link">here</a>.</p>
+<p>If you would like to know which <code><a href="https://rdrr.io/r/base/timezones.html" class="external-link">OlsonNames()</a></code> timezone names are not supported, run this</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">tzs</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/worldtimer-functions.html">worldtimer_timezones</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">olnms</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/timezones.html" class="external-link">OlsonNames</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">olnms</span><span class="op">[</span><span class="op">!</span><span class="va">olnms</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">tzs</span><span class="op">$</span><span class="va">timezone</span><span class="op">]</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="are-there-rate-limits">Are there rate limits?<a class="anchor" aria-label="anchor" href="#are-there-rate-limits"></a>
+</h3>
+<p>Currently the developer is not aware of any rate limits. However, <code><a href="reference/worldtimer-functions.html">worldtimer()</a></code> will automatically retry if a request is denied due to rate limits.</p>
+</div>
+<div class="section level3">
+<h3 id="can-i-support-the-api-developers">Can I support the API developers?<a class="anchor" aria-label="anchor" href="#can-i-support-the-api-developers"></a>
+</h3>
+<p>WorldTimeAPI is entirely funded at a loss, and should costs become prohibitive the API will, with a heavy heart, be taken down permanently. That’s why the API developers would like to ask users of the API to please consider contributing via a <a href="https://liberapay.com/WorldTimeAPI" class="external-link">regular donation</a> to help cover hosting costs and to keep the project alive.</p>
+</div>
+<div class="section level3">
+<h3 id="more-information">More Information<a class="anchor" aria-label="anchor" href="#more-information"></a>
+</h3>
 <p>For more information, please visit the <a href="http://worldtimeapi.org/pages/faqs" class="external-link">FAQ page of WorldTimeAPI</a>.</p>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
