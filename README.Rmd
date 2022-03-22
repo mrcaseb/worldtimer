@@ -86,4 +86,26 @@ str(ip_in_japan)
 
 ## FAQ
 
+### Why is my timezone missing?
+
+R offers a commonly used list of timezones that can be called with `OlsonNames()`. Some of these timezones are not listed in `worldtimer_timezones()` because they are not canonical which means that a timezone name is just an alias for the actual ("canonical") timezone name. A full list of canonical timezones can be found [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). 
+
+If you would like to know which `OlsonNames()` timezone names are not supported, run this
+
+```{r echo=TRUE, eval=FALSE}
+tzs <- worldtimer_timezones()
+olnms <- OlsonNames()
+olnms[!olnms %in% tzs$timezone]
+```
+
+### Are there rate limits?
+
+Currently the developer is not aware of any rate limits. However, `worldtimer()` will automatically retry if a request is denied due to rate limits.
+
+### Can I support the API developers?
+
+WorldTimeAPI is entirely funded at a loss, and should costs become prohibitive the API will, with a heavy heart, be taken down permanently. That's why the API developers would like to ask users of the API to please consider contributing via a [regular donation](https://liberapay.com/WorldTimeAPI) to help cover hosting costs and to keep the project alive.
+
+### More Information
+
 For more information, please visit the [FAQ page of WorldTimeAPI](http://worldtimeapi.org/pages/faqs).
