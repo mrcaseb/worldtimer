@@ -8,6 +8,8 @@ test_that("worldtimer works", {
   expect_type(tz, "list")
   expect_identical(print(tz), tz)
   expect_invisible(print(tz))
+  expect_type(format(tz), "character")
+  expect_vector(format(tz))
 })
 
 test_that("wrappers work", {
