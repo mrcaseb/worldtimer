@@ -10,6 +10,25 @@ test_that("worldtimer works", {
   expect_invisible(print(tz))
 })
 
+test_that("wrappers work", {
+  skip_on_cran()
+  skip_if_offline("worldtimeapi.org")
+
+  runner_ip <- worldtimer_ip()
+  expect_true(inherits(runner_ip, "worldtimer"))
+  expect_gte(length(runner_ip), 14)
+  expect_type(runner_ip, "list")
+  expect_identical(print(runner_ip), runner_ip)
+  expect_invisible(print(runner_ip))
+
+  ip_in_japan <- worldtimer_ip("101.110.34.62")
+  expect_true(inherits(ip_in_japan, "worldtimer"))
+  expect_gte(length(ip_in_japan), 14)
+  expect_type(ip_in_japan, "list")
+  expect_identical(print(ip_in_japan), ip_in_japan)
+  expect_invisible(print(ip_in_japan))
+})
+
 test_that("timezones are returned", {
   skip_on_cran()
   skip_if_offline("worldtimeapi.org")
