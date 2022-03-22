@@ -11,9 +11,9 @@ template:
   bslib:
     font_scale: 1.1
     base_font: {google: "IBM Plex Sans"}
-    heading_font: {google: "Kanit"}
+    heading_font: {google: "Codystar"}
     code_font: {google: "Fira Code"}
 
 navbar:
-  bg: dark
+  bg: primary
 
