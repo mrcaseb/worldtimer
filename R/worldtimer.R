@@ -67,10 +67,24 @@ worldtimer_timezones <- function(){
 #' @export
 #' @rdname worldtimer-functions
 worldtimer_ip <- function(ipv4 = NULL){
-  if(is.null(ipv4)) {
+  if(is.null(ipv4)) { # no need to check the user argument
     worldtimer("ip", simplifyVector = TRUE)
-  } else if (is.character(ipv4)) {
-    worldtimer(paste0("ip/", ipv4), simplifyVector = TRUE)
+  } else {# check the user input
+    if (length(ipv4) > 1) {
+      cli::cli_abort("Vectors for the argument {.arg ipv4} are not supported")
+    }
+    # ipaddress throws a warning for invalid addresses
+    suppressWarnings({
+      address <- ipaddress::ip_address(ipv4)
+      is_valid <- ipaddress::is_ipv4(address)
+    })
+    if (is.na(is_valid)){# invalid IP
+      cli::cli_abort("{.arg {ipv4}} is an invalid IP address!")
+    } else if (isFALSE(is_valid)){# valid ip but not IPv4
+      cli::cli_abort("{.arg {ipv4}} is not a valid IPv4 address! Did you accidentally pass an IPv6 address?")
+    } else {
+      worldtimer(paste0("ip/", ipv4), simplifyVector = TRUE)
+    }
   }
 }
 

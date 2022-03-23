@@ -29,6 +29,14 @@ test_that("wrappers work", {
   expect_type(ip_in_japan, "list")
   expect_identical(print(ip_in_japan), ip_in_japan)
   expect_invisible(print(ip_in_japan))
+  expect_error(
+    worldtimer_ip("1.2.3.4.5"),
+    regexp = "is an invalid IP address!"
+  )
+  expect_error(
+    worldtimer_ip("2001:db8::7334"),
+    regexp = "Did you accidentally pass an IPv6 address?"
+  )
 })
 
 test_that("timezones are returned", {
