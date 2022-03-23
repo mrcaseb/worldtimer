@@ -97,66 +97,66 @@ booleans, numbers, and strings) be caused to atomic vectors?</p></dd>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">new_york_time</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> List of 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ abbreviation: chr "EDT"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-22T08:40:39.939196-04:00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 81</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-23T03:25:13.757849-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 82</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst         : logi TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_from    : chr "2022-03-13T07:00:00+00:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_offset  : int 3600</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_until   : chr "2022-11-06T06:00:00+00:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ raw_offset  : int -18000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ timezone    : chr "America/New_York"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647952839</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 12:40:39.939196"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1648020313</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-23 07:25:13.757848"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_offset  : chr "-04:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ week_number : int 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "class")= chr "worldtimer"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">new_york_time</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-22 08:40:39.939196 EDT"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-23 03:25:13.757848 EDT"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># The system's public ip</span></span>
 <span class="r-in"><span class="va">system_ip</span> <span class="op">&lt;-</span> <span class="fu">worldtimer_ip</span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">system_ip</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> List of 14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ abbreviation: chr "EDT"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-22T08:40:39.976527-04:00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 81</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ abbreviation: chr "CDT"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-23T02:25:13.797047-05:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 82</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst         : logi TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_from    : chr "2022-03-13T07:00:00+00:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_from    : chr "2022-03-13T08:00:00+00:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_offset  : int 3600</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_until   : chr "2022-11-06T06:00:00+00:00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ raw_offset  : int -18000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ timezone    : chr "America/New_York"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647952839</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 12:40:39.976526"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_offset  : chr "-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_until   : chr "2022-11-06T07:00:00+00:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ raw_offset  : int -21600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ timezone    : chr "America/Chicago"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1648020313</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-23 07:25:13.797047"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_offset  : chr "-05:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ week_number : int 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "class")= chr "worldtimer"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">system_ip</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-22 08:40:39.976526 EDT"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-23 02:25:13.797047 CDT"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Other public ip</span></span>
 <span class="r-in"><span class="va">other_ip</span> <span class="op">&lt;-</span> <span class="fu">worldtimer_ip</span><span class="op">(</span><span class="st">"101.110.34.62"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">other_ip</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> List of 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ abbreviation: chr "JST"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-22T21:40:39.997286+09:00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 81</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ datetime    : chr "2022-03-23T16:25:13.829502+09:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_week : int 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ day_of_year : int 82</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst         : logi FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_from    : NULL</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_offset  : int 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ dst_until   : NULL</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ raw_offset  : int 32400</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ timezone    : chr "Asia/Tokyo"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1647952839</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-22 12:40:39.997285"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ unixtime    : int 1648020313</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_datetime: POSIXct[1:1], format: "2022-03-23 07:25:13.829502"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ utc_offset  : chr "+09:00"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ week_number : int 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "class")= chr "worldtimer"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">other_ip</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-22 21:40:39.997285 JST"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-03-23 16:25:13.829502 JST"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Restore old options</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span><span class="va">old</span><span class="op">)</span></span>
