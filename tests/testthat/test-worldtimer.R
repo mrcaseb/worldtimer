@@ -37,6 +37,10 @@ test_that("wrappers work", {
     worldtimer_ip("2001:db8::7334"),
     regexp = "Did you accidentally pass an IPv6 address?"
   )
+  expect_error(
+    worldtimer_ip(c("2001:db8::7334", "1.2.3.4.5")),
+    regexp = "does not support vectors!"
+  )
 })
 
 test_that("timezones are returned", {
