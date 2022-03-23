@@ -71,7 +71,7 @@ worldtimer_ip <- function(ipv4 = NULL){
     worldtimer("ip", simplifyVector = TRUE)
   } else {# check the user input
     if (length(ipv4) > 1) {
-      cli::cli_abort("Vectors for the argument {.arg ipv4} are not supported")
+      cli::cli_abort("The argument {.arg ipv4} does not support vectors!")
     }
     # ipaddress throws a warning for invalid addresses
     suppressWarnings({
