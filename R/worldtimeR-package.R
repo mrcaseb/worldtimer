@@ -4,7 +4,9 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @import cli
 #' @import httr2
+#' @import ipaddress
 #' @import lubridate
 #' @import tibble
 #' @importFrom magrittr %>%
